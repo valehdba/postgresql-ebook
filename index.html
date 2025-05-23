@@ -2,22 +2,62 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PostgreSQL eBook</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Default theme -->
+  <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <style>
+    #theme-switcher {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    #theme-switcher button {
+      margin: 2px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background: #3498db;
+      color: white;
+      cursor: pointer;
+    }
+    #theme-switcher button:hover {
+      background: #2980b9;
+    }
+  </style>
 </head>
 <body>
+  <div id="theme-switcher">
+    <button onclick="setTheme('vue')">Vue</button>
+    <button onclick="setTheme('dark')">Dark</button>
+    <button onclick="setTheme('buble')">Buble</button>
+    <button onclick="setTheme('pure')">Pure</button>
+  </div>
+
   <div id="app">Loading PostgreSQL eBook...</div>
+
   <script>
+    // Docsify config
     window.$docsify = {
       name: 'PostgreSQL eBook',
-      repo: 'valehdba/postgresql-ebook', 
+      repo: '',
       loadSidebar: true,
-      loadNavbar: false,
       subMaxLevel: 2,
       themeColor: '#2c3e50'
+    };
+
+    // Theme switcher
+    function setTheme(name) {
+      const themeHref = `//cdn.jsdelivr.net/npm/docsify/lib/themes/${name}.css`;
+      document.getElementById('theme-style').setAttribute('href', themeHref);
     }
   </script>
+
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
 </html>
