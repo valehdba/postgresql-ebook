@@ -2,16 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PostgreSQL eBook</title>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app">Loading...</div>
+  <div id="app">Loading PostgreSQL eBook...</div>
   <script>
     window.$docsify = {
+      name: 'PostgreSQL eBook',
+      repo: 'yourusername/postgresql-ebook', // <-- Replace with your actual GitHub repo
       loadSidebar: true,
-      name: 'PostgreSQL eBook'
+      loadNavbar: false,
+      subMaxLevel: 2,
+      themeColor: '#2c3e50'
     }
   </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
 </html>
