@@ -1,4 +1,2 @@
-* [Introduction](intro.md)
-* [Data Types](data-types.md)
-* [Indexing](indexing.md)
-* [Advanced Topics](advanced-topics.md)
+* [🇬🇧 English](/en/intro.md)
+* [🇦🇿 Azərbaycan dili](/az/intro.md)
